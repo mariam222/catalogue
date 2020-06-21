@@ -61,7 +61,8 @@ public currentKeyword :string="";
   }
 
   onEditProduct(p) {
-    this.router.navigateByUrl("/edit-product/"+p.id);
+    let url=p._links.self.href;
+    this.router.navigateByUrl("/edit-product/"+btoa(url));
 
   }
 }
