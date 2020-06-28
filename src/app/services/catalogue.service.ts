@@ -34,4 +34,10 @@ export class CatalogueService {
     // @ts-ignore
     return objectObservable;
   }
+
+  public updateRessource(url,data):Observable<Product> {
+    let objectObservable = this.httpClient.put(url, data)
+    // @ts-ignore
+    return objectObservable;
+  }
 }
